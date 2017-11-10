@@ -1,0 +1,146 @@
+/* jssor slider bullet navigator skin 01 css */
+/*
+.jssorb01 div           (normal)
+.jssorb01 div:hover     (normal mouseover)
+.jssorb01 .av           (active)
+.jssorb01 .av:hover     (active mouseover)
+.jssorb01 .dn           (mousedown)
+*/
+.jssorb01 {
+    position: absolute;
+}
+.jssorb01 div, .jssorb01 div:hover, .jssorb01 .av {
+    position: absolute;
+    /* size of bullet elment */
+    width: 12px;
+    height: 12px;
+    filter: alpha(opacity=70);
+    opacity: .7;
+    overflow: hidden;
+    cursor: pointer;
+    border: #000 1px solid;
+}
+.jssorb01 div { background-color: gray; }
+.jssorb01 div:hover, .jssorb01 .av:hover { background-color: #d3d3d3; }
+.jssorb01 .av { background-color: #fff; }
+.jssorb01 .dn, .jssorb01 .dn:hover { background-color: #555555; }
+
+.jssora13l, .jssora13r {
+    display: block;
+    position: absolute;
+    /* size of arrow element */   
+    background: transparent;
+    overflow: hidden;
+    width: 25%;
+    height: 100%;
+    top: 0 !important;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.jssora13l{
+    left:0;
+}
+.jssora13r {
+    right:0;
+}
+.jssora13l { background-position: -10px -35px; }
+.jssora13r { background-position: -70px -35px; }
+.jssora13l:hover { background-position: -130px -35px; }
+.jssora13r:hover { background-position: -190px -35px; }
+.jssora13l.jssora13ldn { background-position: -250px -35px; }
+.jssora13r.jssora13rdn { background-position: -310px -35px; }
+.jssora13l.jssora13lds { background-position: -10px -35px; opacity: .3; pointer-events: none; }
+.jssora13r.jssora13rds { background-position: -70px -35px; opacity: .3; pointer-events: none; }
+
+.item-slider a:hover .icon img{
+    -webkit-animation: pulse .7s alternate ease-in-out infinite;
+    animation: pulse .7s alternate ease-in-out infinite;
+}
+.item-slider a:before{
+    position: absolute;
+    content: "";
+    width: 101%;
+    height: 50%;
+    background-image: linear-gradient(180deg, rgba(29, 32, 40, 0) 0%, #1d2028 100%);
+    bottom: 0;
+    z-index: 2;
+}
+.infor-text {
+    bottom: 0;
+    top: auto;
+    position: absolute;
+    padding: 0 10%;
+    width: 100%;
+    z-index: 3 !important;
+}
+.item-slider  .icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: block;
+    z-index: 999;
+    transform: translate(0, -50%) !important;
+}
+.item-slider   .icon img{
+    width: 30px;
+    border-radius: 50%;
+    height: 30px;
+    border: 1px solid transparent;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+.infor-text h6{
+    color: #ffb600;
+    font-size: 9px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 12px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ffb600;
+    display: inline-block; 
+    margin-bottom: 10px;
+
+}
+.infor-text h5{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.jssorb05 {
+    position: absolute;
+}
+.jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.jssorb05 div { background-color: rgba(255, 255, 255, 0.2); }
+.jssorb05 div:hover, .jssorb05 .av:hover { background-color: rgba(255, 255, 255, 0.8); }
+.jssorb05 .av { background-color: rgba(255, 255, 255, 0.8); }
+.jssorb05 .dn, .jssorb05 .dn:hover { background-color: rgba(255, 255, 255, 0.8); }
+
+.dot-cate div{
+    width: 10px;
+    height: 10px;
+    background-color: #b5b9ca;
+}
+.jssorb05 .dot-cate div:hover, .jssorb05 .dot-cate .av:hover, .jssorb05 .av{
+    background-color: #fcae00;
+}

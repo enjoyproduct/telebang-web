@@ -1,0 +1,2 @@
+*/30 * * * *  cd /home/telebang/public_html;  php  index.php  Youtube_subscribe_controller updatePlaylistCron
+*/15 * * * *  cd /home/telebang/public_html;  php  index.php  Youtube_subscribe_controller updatePlaylistCron

@@ -1,0 +1,3 @@
+[12-Apr-2017 16:07:11 Asia/Bangkok] PHP Parse error:  syntax error, unexpected 'minute' (T_STRING) in /home/telebang/public_html/application/config/constants.php on line 122
+[12-Apr-2017 16:08:07 Asia/Bangkok] PHP Parse error:  syntax error, unexpected 'minute' (T_STRING) in /home/telebang/public_html/application/config/constants.php on line 122
+[12-Apr-2017 16:08:15 Asia/Bangkok] PHP Parse error:  syntax error, unexpected ',' in /home/telebang/public_html/application/config/constants.php on line 122

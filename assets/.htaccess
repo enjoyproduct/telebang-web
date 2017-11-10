@@ -1,0 +1,6 @@
+# Allow these directories and files to be displayed directly:
+# - index.php (DO NOT FORGET THIS!)
+# - robots.txt
+# - favicon.ico
+# - Any file inside of the files/ - js/, or css/ directories
+RewriteCond $1 ^(index\.php|files)
