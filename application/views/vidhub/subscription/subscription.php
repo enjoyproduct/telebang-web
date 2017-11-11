@@ -136,6 +136,7 @@
                                 <div id="verify-error"></div>
                             </div>
                         </div>
+
                     </div>
                     <div class="col-sm-4">
                         <?php $this->load->view(THEME_VM_DIR.'/includes/socical'); ?>
@@ -150,64 +151,6 @@
 </div>
 
 <?php $this->load->view(THEME_VM_DIR.'/includes/footer'); ?>
-<!-- <script type="text/javascript">
-    $(document).ready(function() {
 
-        function createTable() {
-
-            mytable = $('<table></table>').attr({ id: "basicTable" });
-            var rows = "<?php echo count($subscriptions)?>";
-            var cols = new Number("3");
-            var tr = [];
-            for (var i = 0; i < rows; i++) {
-                var row = $('<tr></tr>').attr({ class: ["class1", "class2", "class3"].join(' ') }).appendTo(mytable);
-                for (var j = 0; j < cols; j++) {
-                    $('<td></td>').text("text1").appendTo(row);
-                }
-
-            }
-            //console.log("TTTTT:" + mytable.html());
-            mytable.appendTo("#dialog");
-
-        }
-
-        $("#dialog").dialog({
-            autoOpen: false,
-            open: function (event, ui) {
-                createTable();
-            }
-        });
-
-
-        $('#btn_history').click(function () {
-            var user_id = $('#user_id').val();
-            var url = "<?php echo base_url('index.php/'.THEME_CONTROLLER_PATH.'/api/getSubscriptionHistory'); ?>";
-            jQuery.ajax({
-                type: "POST",
-                url: url,
-                dataType: 'json',
-                data: {
-                    user_id: user_id
-                },
-                success: function(res) {
-                    console.log(res);
-                    var message = res.message;
-                    if (message == "Login Successflly!")
-                    {
-                        location.reload();
-                    }else{
-                        jQuery("div.alert-danger").show();
-                        jQuery("div#value").html(res.message);
-                    }
-                },
-                complete: function(res) {
-                    // console.log(res);
-                    // alert('complete');
-                }
-
-            });
-        });
-    });
-</script> -->
 
 

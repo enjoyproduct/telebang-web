@@ -40,7 +40,7 @@ class Mvideos extends CI_Model
     public function getDetail($videoId)
     {
         $this->db->reconnect();
-        $this->db->select('*, users.IsVip as IsUserVip');
+         $this->db->select('*, users.IsVip as IsUserVip');
         $this->db->from('videos');
         $this->db->join('users', 'users.UserId = videos.CrUserId ', 'left');
         $this->db->where('VideoId',$videoId);
@@ -166,6 +166,7 @@ class Mvideos extends CI_Model
             {
                 $ids[] = $row->video_id;
             }
+
             $query = $this->db->where_in('VideoId', $ids)->order_by('ViewCount', "desc")->get('videos');
         }else{
             return false;

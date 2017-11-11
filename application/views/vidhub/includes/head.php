@@ -29,7 +29,7 @@
 	<script src="assets/paystack/app.js" type="text/javascript"></script>
 	<script src="assets/paystack/nprogress.js" type="text/javascript"></script>
 	<link href="assets/paystack/nprogress.css" rel="stylesheet" type="text/css" />
-
+	
 	<script src="assets/global/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 	<script src="assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
 	<script src="assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>

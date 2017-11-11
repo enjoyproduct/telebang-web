@@ -1,5 +1,5 @@
 <h3 class="headding-title ">
-	Featured Videos
+    Featured Videos
 </h3>
 <div id="jssor_3" style="position:relative;margin:0 auto;top:0px;left:0px;width: 800px;height:350px;visibility:hidden;">
     <!-- Loading Screen -->
@@ -31,11 +31,11 @@
                     ?>">
                         <div class="thumbnail">
                             <img data-u="image" src="<?php echo getImagePath($value['VideoImage']) ?>" />
-                            <?php if ($value['videoVip'] == 1) { ?>
-                                <h6 style="padding: 10px; margin-bottom: 0px; margin-top: 0px; background-color:#ffcc00; color:#000000;"><b>Subscription</b></h6>
-                            <?php } ?>
                         </div>
                     </a>
+                    <?php if ($value['videoVip'] == 1) { ?>
+                                <h6 style="padding: 10px; margin-bottom: 0px; margin-top: 0px; background-color:#ffcc00; color:#000000;"><b>Subscription</b></h6>
+                            <?php } ?>
                     <div class="video-infor">
                         <h5><a href="<?php 
                         // echo $value['videoDetailPath'] 
@@ -65,7 +65,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         <?php
             }

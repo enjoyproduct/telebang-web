@@ -17,8 +17,7 @@ class Subscription extends BaseV1Controller {
 		// $this->load->view(THEME_VM_DIR.'/elements/share-video');
 	}
 	function subscription_view() {
-		$customer = $this->session->userdata('customer');
-		$this -> view_render('subscription/subscription');
+        $this -> view_render('subscription/subscription');
 	}
 	function subscription_history() {
         $this -> view_render('subscription/subscription_history');

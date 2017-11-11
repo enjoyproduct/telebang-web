@@ -37,7 +37,7 @@ a:hover{
 	float: right;
 }
 .header-logo img{
-	height: 50px;
+	height: 37px;
 }
 .header-action .avatar-user{
 	position: relative;
@@ -441,7 +441,7 @@ a:hover .thumbnail:before,
     min-width: 100%;
 }
 .list-item li .video-infor{
-	margin-left: -130px;
+	// margin-left: -130px;
 }
 .list-item li h5{
 	margin-top: 0;
@@ -1094,7 +1094,7 @@ img{
 
 }
 .video-play{
-	background-color: #1d2028;
+	background-color: #000;
 }
 .share-detail .action-share li{
 	float: left;

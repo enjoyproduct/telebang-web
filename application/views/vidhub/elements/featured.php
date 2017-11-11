@@ -25,11 +25,10 @@
 	                	?>">
 	                    	<img data-u="image"  src="<?php echo $image ?>" />
 	                	</a>
-						<?php if ($value['videoVip'] == 1) { ?>
+	                	<?php if ($value['videoVip'] == 1) { ?>
                             <h6 style="padding: 10px; margin-bottom: 0px; margin-top: 0px; background-color:#ffcc00; color:#000000;"><b>Subscription</b></h6>
                         <?php } ?>
 	                </div>
-	                
 	                <div class="video-infor">
 	                    <h5><a href="<?php 
 	                    	// echo $value['videoDetailPath'] 

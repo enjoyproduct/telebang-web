@@ -52,7 +52,7 @@ class Api extends CI_Controller
             echo $this->responseErrorJson('UserName or Password is blank.');
         }
     }
-    public function get_new_access_code() {
+     public function get_new_access_code() {
         $user_id = $this->input->post('user_id');
         $subs_type = $this->input->post('subscribed_type');
         $this->load->model('musers');
@@ -67,11 +67,13 @@ class Api extends CI_Controller
             $data['email'] = $user['Email'];
             $data['amount'] = $this->count_subscription_amount($subs_type);
             $new_access_code = get_new_access_code($data);
+            // var_dump(($new_access_code));exit();
             echo json_encode(array(
                 'code' =>  $new_access_code['code'] ,
                 'message' => $new_access_code['message'] ,
                 'content' => $new_access_code['content'] 
             ));
+            
         }
     }
     public function verify_transaction() {
@@ -111,7 +113,7 @@ class Api extends CI_Controller
             echo $this->responseErrorJson('UserName or Email is blank.');
         }
     }
-    function count_subscription_amount($subs_type) {
+   function count_subscription_amount($subs_type) {
         switch ($subs_type) {
             case 0:
                 return 1 * SUBSCRIPTION_AMOUNT_PER_MONTH * 100;
@@ -121,7 +123,7 @@ class Api extends CI_Controller
                 return 6 * SUBSCRIPTION_AMOUNT_PER_MONTH * 100;
             case 3:
                 return 12 * SUBSCRIPTION_AMOUNT_PER_MONTH * 100;
-            
+
         }
     }
     public function getSubscriptionHistory() {
@@ -1097,6 +1099,8 @@ class Api extends CI_Controller
             'zip' => $user['Zip'],
             'vip' => intval($user['IsVip']),
             'username' => $user['UserName'],
+            'paystack_auth_code' => $user['paystack_auth_code'],
+            'subscribed_date' => $user['subscribed_date']
         );
     }
 

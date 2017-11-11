@@ -12,10 +12,11 @@ function get_new_access_code ($data) {
     $amountinkobo = $data['amount'];
     $email = $data['email'];
     $builder = new MetadataBuilder();
-    $builder->withCustomField('Started From', 'started_from', 'sample charge card backend');
-    $builder->withCustomField('Requested by', 'requested_by', $email);
-    $builder->withCustomField('Server', 'server', 'http://telebang.com/vidhub');
-//    time()%2 && $builder->withCustomFilters(['recurring'=>true]);
+    $builder->withCustomField('Started From', 'sample charge card backend');
+//    $builder->withCustomField('Started From', 'started_from', 'sample charge card backend');
+//    $builder->withCustomField('Requested by', 'requested_by', $email);
+//    $builder->withCustomField('Server', 'server', 'http://telebang.com/index.php/api/get_new_access_code');
+    time()%2 && $builder->withCustomFilters(['recurring'=>true]);
     $metadata = $builder->build();
 
     try{
@@ -37,7 +38,8 @@ function get_new_access_code ($data) {
     $result['code'] = 1;
     $result['message'] = "Success to get access code";
     $result['content'] = $trx->data->access_code;
-//    die($trx->data->access_code);
+    //    die($trx->data->access_code);
+    
     return($result);
 }
 function verify_transaction($reference) {

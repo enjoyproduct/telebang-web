@@ -49,8 +49,8 @@
 										  	<ul class="dropdown-menu" aria-labelledby="dLabel">
 										    <!-- 	<li><a href="#">SAVED VIDEO</a></li>
 										    	<li><a href="#">MY CHANNEL</a></li> -->
-										    	<li><a href="<?php echo site_url('index.php/'.USER_SETTING_PATH) ?>">PROFILE</a></li>
-										    	<li><a href="<?php echo base_url('index.php/'.THEME_CONTROLLER_PATH.'/auth/logout'); ?>">SIGN OUT</a></li>
+										    	<li><a href="<?php echo site_url(USER_SETTING_PATH) ?>">PROFILE</a></li>
+										    	<li><a href="<?php echo base_url(THEME_CONTROLLER_PATH.'/auth/logout'); ?>">SIGN OUT</a></li>
 										  	</ul>
 										</div>
 									</div>
@@ -85,7 +85,6 @@
 					<?php }?>
 				</div> -->
 			</div>
-			
 			<div class="header-content">	
 				<div class="container">
 					<nav class="navbar navbar-default">
@@ -98,13 +97,13 @@
 									<a href="<?php echo site_url(CATEGORIES_PATH) ?>"> CATEGORIES   </a>
 								</li>
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, BLOG_PATH) !== false) echo ' active open'; ?>">
-									<a href="<?php echo  site_url(BLOG_PATH) ?>"> NEWS/BLOGS</a>
+									<a href="<?php echo BLOG_PATH ?>"> NEWS/BLOGS</a>
 								</li>
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, ABOUTS_PATH) !== false) echo ' active open'; ?>">
-									<a href="<?php echo  site_url(ABOUTS_PATH) ?>">ABOUT US  </a>
+									<a href="<?php echo ABOUTS_PATH ?>">ABOUT US  </a>
 								</li>
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, CONTACT_US) !== false) echo ' active open'; ?>">
-									<a href="<?php echo  site_url(CONTACT_US) ?>"> CONTACT US</a>
+									<a href="<?php echo CONTACT_US ?>"> CONTACT US</a>
 								</li>
 								<?php if ($customer_model){  ?>
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, SUBSCRIPTION_HISTORY) !== false) echo ' active open'; ?>">

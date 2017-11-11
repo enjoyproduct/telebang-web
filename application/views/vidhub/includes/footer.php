@@ -48,18 +48,12 @@
 					</ul>
 				</div>
 				<div class="col-sm-4">
-					<h3 class="headding-footer">
-						Join Our Newsletters
+					<h3 class="headding-footer">Thank you for Watching.
 					</h3>
 					<p>
-						Another category of software that is known to leave bits and pieces.
 					</p>
 					<div class="newsletter">
-						<form action="" >
-							<i class="fa fa-envelope-o" aria-hidden="true"></i>
-							<input type="email" name="EMAIL" placeholder="Your email here…" required class="form-control" />
-							<input type="submit" value="SUBSCRIBE now !" class="form-control btn"/>
-						</form>
+						teleBang is proudly Nigerian.
 					</div>
 				</div>
 			</div>

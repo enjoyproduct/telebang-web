@@ -67,7 +67,9 @@ foreach($categories_selected  as $key1 => $cat_model) {
 			                                    } else {//check expire
 			                                        echo $newCate['videoDetailPath'];
 			                                    }
-			                                }
+			                                } else {
+												echo site_url(LOGIN_ALERT);
+											}
 			                            }
 										?>"><?php echo $title ?></a></h5>
 										<div class="video-action">
@@ -99,7 +101,9 @@ foreach($categories_selected  as $key1 => $cat_model) {
 			                                    } else {//check expire
 			                                        echo $newCate['videoDetailPath'];
 			                                    }
-			                                }
+			                                } else {
+												echo site_url(LOGIN_ALERT);
+											}
 			                            }
 									?>">
 										<div class="thumbnail w3">
@@ -121,7 +125,9 @@ foreach($categories_selected  as $key1 => $cat_model) {
 			                                    } else {//check expire
 			                                        echo $newCate['videoDetailPath'];
 			                                    }
-			                                }
+			                                } else {
+												echo site_url(LOGIN_ALERT);
+											}
 			                            }
 										?>"><?php echo $title ?></a></h5>
 										<div class="video-action">

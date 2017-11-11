@@ -12,8 +12,7 @@
 	},
 	"require": {
 		"php": ">=5.2.4",
-		"ktamas77/firebase-php": "dev-master",
-		"yabacon/paystack-php": "^2.1"
+		"ktamas77/firebase-php": "dev-master"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"

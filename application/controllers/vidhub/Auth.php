@@ -29,6 +29,7 @@ class Auth extends CI_Controller
     {
         $username = trim($this->input->post('username'));
         $password = trim($this->input->post('password'));
+
         $user = $this->session->userdata('customer');
         if ( !$user)
         {
@@ -58,6 +59,7 @@ class Auth extends CI_Controller
         $this->load->library('user_agent');
         // redirect($this->agent->referrer());
         redirect(site_url(HOME_PATH));
+
     }
     public function register()
     {
@@ -167,11 +169,13 @@ class Auth extends CI_Controller
             echo $this->fmResponseData(-3 ,'UserId must be greater than 0.');
         }
     }
+
     public function update_session_for_subscription() {
         $user = $this->session->userdata('customer');
         $user['IsVip'] = 1;
         $this->session->set_userdata('customer', $user);
     }
+    
     private function fmResponseData($code = 0, $message = '', $content = array())
     {
         return json_encode(array(

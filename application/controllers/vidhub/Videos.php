@@ -43,8 +43,7 @@ class Videos extends BaseV1Controller
             $this->data['user_vid']                 = $videoDetail['IsUserVip'];
             $this->data['paystack_auth_code']       = $videoDetail['paystack_auth_code'];
             $this->data['subscribed_date']          = $videoDetail['subscribed_date'];
-
-
+            
             $perPage = $this->theme_config['comment_limit'];
             $page = 1;
             $commentList                            = $this->Comment_video_model->getListComments($videoId, $page, $perPage);

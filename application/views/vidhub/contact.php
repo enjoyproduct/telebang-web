@@ -16,7 +16,7 @@
 						<div class="contact-info">
 							<img src="assets/images/img-contact.jpg" alt="">
 							<div class="description">
-								These tours are made for lovers and groups alike, as well as offering customized tours and additional single accommodations. Designed to dazzle the most inexperienced, as well as most elegant wine connoisseur, tours run May to November and are generally booked for five day and six nights stays.
+							Do you have any question or enquiry, or are you a producer and would love to have your content on telebang?<br> Please, contact us using the form below.
 							</div>
 						</div>
 						<div class="section">

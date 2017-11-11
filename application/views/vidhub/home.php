@@ -34,8 +34,8 @@
 						</div>
 						<div class="banner">
 							<h1 class="clearfix">
-								<span class="main-color">LOVE OUR THEME?</span> GRAB IT NOW!
-								<a href="http://store.inspius.com/downloads/vidhub-theme-video-site/"  target="_blank" class="btn pull-right">PURCHASE NOW</a>
+								<span class="main-color">LOVE OUR VIDEOS?</span> SUBSCRIBE NOW!
+								<a href=""  target="_blank" class="btn pull-right">COMING SOON</a>
 							</h1>
 						</div>
 						<div class="row">		

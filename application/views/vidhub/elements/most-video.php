@@ -1,8 +1,8 @@
 <div class="container">
-	<h3 class="headding-title text-center">
-		Most Viewed This Week
-	</h3>
-	<div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width: 800px;height:150px;visibility:hidden;">
+    <h3 class="headding-title text-center">
+        Most Viewed This Week
+    </h3>
+    <div id="jssor_2" style="position:relative;margin:0 auto;top:0px;left:0px;width: 800px;height:150px;visibility:hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position:absolute;top:0px;left:0px;background-color:rgba(0,0,0,0.7);">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
@@ -31,9 +31,9 @@
                             } 
 
                             ?>">
-                             <div class="thumbnail">
-                                <img data-u="image" class="image-video" src="<?php echo $value['VideoImage'] ?>" />
-                            </div>
+                                <div class="thumbnail">
+                                    <img data-u="image" class="image-video" src="<?php echo $value['VideoImage'] ?>" />
+                                </div>
                             </a>
                             <div class="video-infor">
                                 <h5><a href="<?php 

@@ -51,8 +51,6 @@ class BaseV1Controller extends MY_Controller
         }
     }
 
-       
-
     private function getCategoriesFooter(){
         $result = $this->Mcategories->getList();
         $parentCategoies = array();
@@ -86,7 +84,6 @@ class BaseV1Controller extends MY_Controller
         $video['videoDetailPath']   = site_url(sprintf(VIDEO_DETAIL_PATH, to_slug($video['VideoTitle']), $video['VideoId']));
         $video['VideoImage']        = getImagePath($video['VideoImage']);
         $video['videoVip']          = $video["IsVip"];
-
         return $video;
     }
 

@@ -169,6 +169,6 @@
         <?php endif ?>
     </ul>
     <div class="copyright">
-        Copyright ©<br/> 2016 <a href="http://inspius.com" target="_blank">Inspius</a> Singapore PTE
+        Copyright ©<br/> 2017 <a href="http://telebang.com" target="_blank">telebang</a> Proudly Nigerian.
     </div>
 </div>

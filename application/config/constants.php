@@ -96,7 +96,7 @@ define('COMMENT_STATUS_APPROVED', 2);
 define('NOTIFICATION_VIDEO_TYPE', 'video');
 define('NOTIFICATION_NEWS_TYPE', 'news');
 define('NOTIFICATION_MODULE_ENABLE', true);
-define('FIREBASE_API_KEY', 'AIzaSyBdMtiiTAHPXGfknJzHjlHd5UNKVMJAimo');
+define('FIREBASE_API_KEY', 'AIzaSyBwNFokgw31X5sQkPEIQSkSMO5wOLPbPdA');
 
 // view action status
 define('VIEW_ACTION_UPDATE', 1);
@@ -144,12 +144,12 @@ define('USER_MY_VIDEO_PATH', 'my-video');
 define('SUBSCRIPTION_HISTORY', 'subscription_history');
 define('SUBSCRIPTION', 'subscription');
 define('LOGIN_ALERT', 'login_alert');
-
 // V1 Key :c1-your_key
 
 define('V1_SLIDE_TYPE_VIDEO', 's1-video');
 define('V1_SLIDE_TYPE_NEWS', 's1-news');
 define('V1_SLIDE_TYPE_URL', 's1-url');
+
 
 //paystack key
 define('PAYSTACK_SECRET', 'sk_test_1254a67b29e8ffafa4ed35e59493991761c70922');

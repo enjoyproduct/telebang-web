@@ -21,7 +21,6 @@
 		      	<div class="col-sm-6">
 					<div class="item-video clearfix">
 						<div class="video-image">
-
 							<a href="<?php 
 								if ($videoModel['videoVip'] == 0) {
 									echo $videoModel['videoDetailPath'];

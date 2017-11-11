@@ -120,11 +120,9 @@
 		    event.preventDefault();
 		    var user_name = $("input#username").val();
 		    var password = $("input#password").val();
-		    var url = "<?php echo base_url('index.php/'.THEME_CONTROLLER_PATH.'/auth/login'); ?>";
-		    console.log(url);
 		    jQuery.ajax({
 		        type: "POST",
-		        url: url,
+		        url: "<?php echo base_url(THEME_CONTROLLER_PATH.'/auth/login'); ?>",
 		        dataType: 'json',
 		        data: {
 		        	username: user_name,
@@ -140,12 +138,7 @@
 		            	jQuery("div.alert-danger").show();
 						jQuery("div#value").html(res.message);
 		            }
-		        },
-		        complete: function(res) {
-		        	// console.log(res);
-		        	// alert('complete');
 		        }
-
 	        });
 	    });
 	    $(".btn-forgot").click(function(e){
@@ -198,10 +191,9 @@
 	    		jQuery("div.alert-success").show();
 	    		jQuery("div.alert-danger").hide();
 		        jQuery("div#value").html("Passwords match!");
-		        var url = "<?php echo base_url('index.php/'.THEME_CONTROLLER_PATH.'/auth/register'); ?>";
 			    jQuery.ajax({
 		    		type: "POST",
-		    		url: url,
+		    		url: "<?php echo base_url(THEME_CONTROLLER_PATH.'/auth/register'); ?>",
 		    		dataType: 'json',
 		    		data: {
 		    			username: username,
@@ -209,7 +201,6 @@
 		    			email: email
 		    		},
 		    		success: function(res){
-		    			console.log(res);
 		    			var code = res.code;
 			            jQuery("div#value").html(res.message);
 		    			if (code > 0) {
@@ -217,9 +208,6 @@
 		    			}else{
 			        		jQuery("div#value").html(res.message);
 		    			}
-		    		}, 
-		    		complete: function(res) {
-		    			// console.log('complete');
 		    		}
 		    	});
 		    }
