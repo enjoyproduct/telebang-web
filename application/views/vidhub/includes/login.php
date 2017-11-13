@@ -122,7 +122,7 @@
 		    var password = $("input#password").val();
 		    jQuery.ajax({
 		        type: "POST",
-		        url: "<?php echo base_url(THEME_CONTROLLER_PATH.'/auth/login'); ?>",
+		        url: "<?php echo base_url('index.php/'.THEME_CONTROLLER_PATH.'/auth/login'); ?>",
 		        dataType: 'json',
 		        data: {
 		        	username: user_name,

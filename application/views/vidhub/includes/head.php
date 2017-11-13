@@ -2,13 +2,13 @@
 <head>
 	<meta charset="utf-8" />
 	<title>  <?php echo $head_title ?> </title>
-	<meta name="description" content="<?php echo $meta_description ?>">
-	<meta name="keywords" content="<?php echo $meta_keywords ?>">
+	<!-- <meta name="description" content="<?php echo $meta_description; ?>"> -->
+	<meta name="keywords" content="<?php echo $meta_keywords; ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<meta content="width=device-width, initial-scale=1" name="viewport">
 	<base href="<?php echo base_url(); ?>"/>
 	<!-- BEGIN GLOBAL MANDATORY STYLES -->
-	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet"/>
 	<link href="assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 	<link href="assets/global/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 	<link href="<?php echo sprintf('assets/global/%s/style.css', THEME_VM_DIR); ?>" rel="stylesheet" type="text/css" />
@@ -19,8 +19,8 @@
 	<link rel="stylesheet" href="assets/global/css/flexslider.css" type="text/css" media="screen" />
 	<!-- END THEME LAYOUT STYLES -->
 	<link rel="shortcut icon" type='image/x-icon' href="favicon.ico" />
-	<link rel="stylesheet" href="assets/global/social-share-kit/css/social-share-kit.css" type="text/css">
-	<link rel="stylesheet" href="assets/global/social-share-kit/fonts" type="text/css">
+	<link rel="stylesheet" href="assets/global/social-share-kit/css/social-share-kit.css" type="text/css"/>
+	<link rel="stylesheet" href="assets/global/social-share-kit/fonts" type="text/css"/>
 
 	
 

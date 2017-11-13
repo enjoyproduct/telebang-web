@@ -83,7 +83,7 @@ $route['contact-us'] = THEME_CONTROLLER_PATH . '/contact';
 
 $route['contact-form'] = THEME_CONTROLLER_PATH . '/contact';
 // Subscription
-$route['subscription_history'] = THEME_CONTROLLER_PATH . '/subscription/subscription_history';
+$route['subscription_history/(:any)'] = THEME_CONTROLLER_PATH . '/subscription/subscription_history/$1';
 $route['subscription'] = THEME_CONTROLLER_PATH . '/subscription/subscription_view';
 // User Setting
 $route['user'] = THEME_CONTROLLER_PATH . '/user/setting';

@@ -19,7 +19,14 @@ class Subscription extends BaseV1Controller {
 	function subscription_view() {
         $this -> view_render('subscription/subscription');
 	}
-	function subscription_history() {
+	function subscription_history($user_id) {
+		if (!empty($user_id)) {
+            $this->load->model('Msubscription');
+            $histories = $this->Msubscription->getSubscriptionsByUserID($user_id);
+            $this->data['subscription_history'] = $histories;
+        } else {
+            
+        }
         $this -> view_render('subscription/subscription_history');
 	}
 }

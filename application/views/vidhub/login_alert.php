@@ -14,7 +14,7 @@
 				<div class="row">
 					<div class="col-sm-8">
 						<div class="portlet-body">
-							Please login to view VIP video.
+							Please login and subscribe to view VIP video.
 						</div>
 					</div>
 					<div class="col-sm-4">

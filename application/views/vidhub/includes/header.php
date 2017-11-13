@@ -4,7 +4,7 @@
     $currentUrl = uri_string(); 
 ?>
 <script>
-	var user_id = <?php echo $customer_model['UserId']?:0; ?>;
+	var user_id = <?php echo $customer_model['UserId']? : 0; ?>;
 </script>
 <body>
 	<div id="wrapper" class="wrapper">
@@ -105,7 +105,7 @@
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, CONTACT_US) !== false) echo ' active open'; ?>">
 									<a href="<?php echo CONTACT_US ?>"> CONTACT US</a>
 								</li>
-								<?php if ($customer_model){  ?>
+								<?php if ($customer_model && $customer_model['IsVip'] == 0){  ?>
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, SUBSCRIPTION_HISTORY) !== false) echo ' active open'; ?>">
 									<a href="<?php echo site_url(SUBSCRIPTION) ?>"> SUBSCRIPTIONS</a>
 								</li>

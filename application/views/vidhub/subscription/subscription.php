@@ -93,6 +93,7 @@
                                     <div class="col-sm-offset-3 col-sm-9">
                                       <button type="submit" class="btn btn-success" id="btn_pay" data-paystack="submit">Pay Now</button>
                                       <!-- <button type="button" class="btn btn-success" id="btn_history">Subscription History</button> -->
+                                      <a href="<?php echo site_url(SUBSCRIPTION_HISTORY.'/'.$customer_model['UserId']) ?>" class="btn btn-success"> Subscription History</a>
                                     </div>
                                   </div>
                                 </fieldset>
