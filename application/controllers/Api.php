@@ -76,7 +76,7 @@ class Api extends CI_Controller
             
         }
     }
-    public function verify_transaction() {
+    public function verify_subscription() {
         $paystack_reference = $this->input->post('paystack_auth_code');
         $response = verify_transaction($paystack_reference);
         echo json_encode($response);

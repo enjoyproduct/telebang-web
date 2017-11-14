@@ -105,11 +105,16 @@
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, CONTACT_US) !== false) echo ' active open'; ?>">
 									<a href="<?php echo CONTACT_US ?>"> CONTACT US</a>
 								</li>
-								<?php if ($customer_model && $customer_model['IsVip'] == 0){  ?>
-								<li class="has-sub nav-item<?php if (strpos($currentUrl, SUBSCRIPTION_HISTORY) !== false) echo ' active open'; ?>">
-									<a href="<?php echo site_url(SUBSCRIPTION) ?>"> SUBSCRIPTIONS</a>
-								</li>
-								<?php }?>
+								<?php if ($customer_model) { 
+										if ($customer_model['IsVip'] == 0) { ?>
+											<li class="has-sub nav-item<?php if (strpos($currentUrl, SUBSCRIPTION_HISTORY) !== false) echo ' active open'; ?>">
+												<a href="<?php echo site_url(SUBSCRIPTION) ?>"> SUBSCRIPTIONS</a>
+											</li>
+									<?php } else { ?> 
+										<li class="has-sub nav-item<?php if (strpos($currentUrl, SUBSCRIPTION_HISTORY) !== false) echo ' active open'; ?>">
+												<a href="<?php echo site_url(SUBSCRIPTION_HISTORY.'/'.$customer_model['UserId']) ?>"> SUBSCRIPTION HISTORY</a>
+											</li>
+								<?php }}?>
 							</ul>
 						</div>
 					</nav>
