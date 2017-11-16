@@ -135,6 +135,8 @@ define('HOME_PATH', 'vidhub');
 define('VIDEO_DETAIL_PATH', '%s-%d.html');
 define('VIDEOS_BY_CATEGORY_PATH', 'category/%d');
 define('CATEGORIES_PATH', 'categories');
+define('SERIES_PATH', 'series');
+define('VIDEOS_BY_SERIES_PATH', 'series/%d');
 define('BLOG_PATH', 'blogs');
 define('BLOG_DETAIL_PATH', 'blog/%s-%d.html');
 define('ABOUTS_PATH', 'about-us');

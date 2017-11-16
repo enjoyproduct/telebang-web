@@ -117,6 +117,21 @@ class Videos extends BaseV1Controller
             $data['txtError'] = $this->session->flashdata('txtError');
         $this->load->view(THEME_VM_DIR.'/videos/category', $this->data);
     }
+    public function video_series_page()
+    {
+        $this->load->model('Mseries');
+        $data = array();
+        $listSeries = $this->formatSeriesList($this->Mseries->getList());
+
+
+        $this->data['listSeries'] = $listSeries;
+
+        if ($this->session->flashdata('txtSuccess'))
+            $data['txtSuccess'] = $this->session->flashdata('txtSuccess');
+        if ($this->session->flashdata('txtError'))
+            $data['txtError'] = $this->session->flashdata('txtError');
+        $this->load->view(THEME_VM_DIR.'/series/series', $this->data);
+    }
 
     public function search($page = 1, $limit = 15, $offset = 0)
     {
@@ -176,6 +191,29 @@ class Videos extends BaseV1Controller
             redirect(HOME_PATH);
     }
 
+    public function videos_by_series_page($seriesId = 0)
+    {
+        $this->load->model('Mseries');
+        if ($seriesId > 0) {
+            $perPage = $this->theme_config['videos_limit'];
+            $page = 1;
+            $series = $this->Mseries->get($seriesId);
+            if($series){
+                
+                $listVideos = $this->Mvideos->getListBySeries($seriesId, ($perPage), "CrDateTime", ($page - 1)*$perPage);
+                $this->data['series'] = $series;
+                $this->data['listVideos'] = $this->formatVideoList($listVideos);
+                $this->data['page'] = $page;
+                $this->data['perPage'] = $perPage;
+                if(!$listVideos || empty($listVideos))
+                    $this->data['message'] = 'No videos';
+                $this->load->view(THEME_VM_DIR.'/series/videos_by_series', $this->data);
+            }else
+                redirect(HOME_PATH);
+        }else
+            redirect(HOME_PATH);
+    }
+
     public function getListVideosByCategory($categoryId = 0 , $page = 1, $limit = 20, $offset = 0)
     {
         if ($page < 1)
@@ -185,6 +223,17 @@ class Videos extends BaseV1Controller
         echo json_encode($this->formatVideoList($listVideos));return;
         
     }
+
+    public function getListVideosBySeries($seriesId = 0 , $page = 1, $limit = 20, $offset = 0)
+    {
+        if ($page < 1)
+            $page = 1;
+        $offset = ($page - 1) * $limit;
+        $listVideos = $this->Mvideos->getListBySeries($seriesId, $limit, "CrDateTime", $offset);
+        echo json_encode($this->formatVideoList($listVideos));return;
+        
+    }
+
     public function get_videos_by_category($categoryId = 0 , $page = 1, $limit = 20, $offset = 0)
     {
         if ($categoryId > 0) {

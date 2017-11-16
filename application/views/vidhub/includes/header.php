@@ -96,6 +96,9 @@
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, CATEGORIES_PATH) !== false) echo ' active open'; ?>">
 									<a href="<?php echo site_url(CATEGORIES_PATH) ?>"> CATEGORIES   </a>
 								</li>
+								<li class="has-sub nav-item<?php if (strpos($currentUrl, SERIES_PATH) !== false) echo ' active open'; ?>">
+									<a href="<?php echo site_url(SERIES_PATH) ?>"> SERIES   </a>
+								</li>
 								<li class="has-sub nav-item<?php if (strpos($currentUrl, BLOG_PATH) !== false) echo ' active open'; ?>">
 									<a href="<?php echo BLOG_PATH ?>"> NEWS/BLOGS</a>
 								</li>

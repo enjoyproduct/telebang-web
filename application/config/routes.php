@@ -63,11 +63,17 @@ $route['(:any)-(:num).html'] = THEME_CONTROLLER_PATH . '/videos/video_detail_pag
 // Home
 $route[HOME_PATH] =  THEME_CONTROLLER_PATH . '/home';
 
+// Video categories page
+$route['categories'] = THEME_CONTROLLER_PATH . '/videos/video_category_page';
+
 // Video by Category : abc.com/cat_id
 $route['category/(:any)'] = THEME_CONTROLLER_PATH . '/videos/videos_by_category_page/$1';
 
-// Video categories page
-$route['categories'] = THEME_CONTROLLER_PATH . '/videos/video_category_page';
+// Video series page
+$route['series'] = THEME_CONTROLLER_PATH . '/videos/video_series_page';
+
+// Video by Series : abc.com/series_id
+$route['series/(:any)'] = THEME_CONTROLLER_PATH . '/videos/videos_by_series_page/$1';
 
 // Blog
 $route['blogs'] = THEME_CONTROLLER_PATH . '/blog';

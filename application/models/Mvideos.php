@@ -214,6 +214,20 @@ class Mvideos extends CI_Model
         return $query->result_array();
     }
 
+    public function getListBySeries($seriesId = 0, $limit = 0, $orderBy = "CrDateTime", $offset = 0)
+    {
+        $this->db->reconnect();
+        $sql = "SELECT * FROM `videos` WHERE (Series = {$seriesId}) "
+            . "ORDER BY {$orderBy} DESC";
+        if ($offset > 0 && $limit > 0) {
+            $sql .= " LIMIT {$offset}, {$limit}";
+        } elseif ($limit > 0) {
+            $sql .= " LIMIT {$limit}";
+        }
+        $query = $this->db->query($sql);
+        return $query->result_array();
+    }
+
     public function get_video_counter_by_cat($categoryId = 0)
     {
         $this->db->reconnect();

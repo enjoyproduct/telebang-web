@@ -101,6 +101,32 @@ class BaseV1Controller extends MY_Controller
         return $content;
     }
 
+    public function formatSeriesList($listSeries)
+    {
+        $content = array();
+        foreach ($listSeries as $series) {
+            $content[] = $this->formatSeries($series);
+        }
+        return $content;
+        
+    }
+
+    private function formatSeries($series) {
+        $thumbnail = $series['thumbnail'];
+        if (!empty($thumbnail)) {
+            if (strpos($thumbnail, 'http') == false)
+                $thumbnail = base_url(IMAGE_PATH . $thumbnail);
+        }
+        return array(
+            'id' => $series[Mseries::TABLE_ID],
+            'title' => $series[Mseries::TABLE_SERIES_NAME],
+            'thumbnail' => $thumbnail,
+            'short_description' => $series[Mseries::TABLE_SERIES_SHORT_DESC],
+            'completed' => $series[Mseries::TABLE_SERIES_COMPLETED],
+            'url_list_video' => site_url(sprintf(VIDEOS_BY_SERIES_PATH, $series[Mseries::TABLE_ID]))
+        );
+    }
+
     public function formatNews($news)
     {   
         $content = array();
